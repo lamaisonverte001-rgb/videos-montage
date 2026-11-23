@@ -1,0 +1,62 @@
+{
+  "id": "script1",
+  "fps": 30,
+  "duration": 20,
+  "scenes": [
+    { "id": "hook",     "start": 0,    "end": 2    },
+    { "id": "triptych", "start": 2,    "end": 4.5  },
+    { "id": "clay",     "start": 4.5,  "end": 8    },
+    { "id": "brass",    "start": 8,    "end": 11.5 },
+    { "id": "cedar",    "start": 11.5, "end": 15   },
+    { "id": "merge",    "start": 15,   "end": 17   },
+    { "id": "cta",      "start": 17,   "end": 20   }
+  ],
+  "texts": [
+    { "id": "hook", "start": 0.3, "end": 2.0, "ar": "نفس العطر.. ريحة مختلفة؟!", "lat": "Nefs l3ter.. ri7a mkhtalfa?!", "emphasis": "مختلفة" },
+    { "id": "sticker1", "start": 2.7,  "end": 4.4, "ar": "جلد ناشف", "lat": "Jild nachef", "emphasis": "ناشف", "slot": "strip1" },
+    { "id": "sticker2", "start": 2.95, "end": 4.4, "ar": "جلد دهني", "lat": "Jild dhni", "emphasis": "دهني", "slot": "strip2" },
+    { "id": "sticker3", "start": 3.2,  "end": 4.4, "ar": "جلد سخون", "lat": "Jild skhoun", "emphasis": "سخون", "slot": "strip3" },
+    { "id": "clay",  "start": 4.9,  "end": 7.8,  "ar": "كيهرب بسرعة", "lat": "Kayhrab 3jal", "emphasis": "بسرعة" },
+    { "id": "brass", "start": 8.4,  "end": 11.3, "ar": "كيبقى بزاف", "lat": "Kayb9a bzaf", "emphasis": "بزاف" },
+    { "id": "cedar", "start": 11.9, "end": 14.8, "ar": "كيفوح أقوى", "lat": "Kayfou7 a9wa", "emphasis": "أقوى" },
+    { "id": "merge", "start": 15.2, "end": 16.9, "ar": "نفس العطر = 3 ريحات!", "lat": "Nefs l3ter = 3 ri7at!", "emphasis": "3 ريحات" },
+    { "id": "merge-sub", "start": 15.9, "end": 16.9, "ar": "السبب: pH + دهون + حرارة الجلد", "lat": "Sbab: pH, zit, skhana dyal jild", "small": true },
+    { "id": "cta1", "start": 17.2, "end": 18.3, "ar": "جرّب العطر على جلدك", "lat": "Jerreb l3ter 3la jildek", "icon": "arrow-down" },
+    { "id": "cta2", "start": 18.4, "end": 19.7, "ar": "عطرك الجاي عندنا", "lat": "L3ter dyalek jay m3ana", "icon": "leaf" },
+    { "id": "url",  "start": 18.0, "end": 20.0, "lat": "lamaisonverte.ma", "underlineDrawEnd": 18.5 }
+  ],
+  "gauge": [
+    { "scene": "clay",  "from": 1.0, "to": 0.15, "start": 4.9, "end": 6.9, "ease": "easeInOutCubic" },
+    { "scene": "brass", "from": 0.85, "to": 0.85, "start": 8.4, "end": 10.0 },
+    { "scene": "cedar", "from": 0.6, "to": 1.0, "start": 11.9, "end": 13.9, "ease": "easeOutCubic" }
+  ],
+  "particles": {
+    "clay":  { "count": 120, "life": 0.8, "mode": "fall-fade",  "tint": "#E8DCC0" },
+    "brass": { "count": 90,  "life": 3.0, "mode": "stick-shimmer", "tint": "#C9A24B" },
+    "cedar": { "count": 110, "life": 2.2, "mode": "rise-turbulent", "tint": "#E0883A" },
+    "merge": { "count": 150, "mode": "converge-ring", "tints": ["#E8DCC0", "#C9A24B", "#E0883A"] },
+    "hook":  { "count": 40,  "mode": "sparks-3" }
+  },
+  "sfx": [
+    { "t": 0,    "dur": 20,   "type": "bed",        "gainDb": -34 },
+    { "t": 0.6,  "dur": 0.3,  "type": "whoosh",     "from": 400, "to": 3000 },
+    { "t": 0.9,  "dur": 0.15, "type": "tick",       "gainDb": -8 },
+    { "t": 0.9,  "dur": 0.35, "type": "thump_noise" },
+    { "t": 1.0,  "dur": 0.35, "type": "whoosh",     "from": 600, "to": 4000 },
+    { "t": 2.0,  "dur": 0.45, "type": "whoosh",     "from": 400, "to": 3500 },
+    { "t": 2.7,  "dur": 0.08, "type": "pop" },
+    { "t": 2.95, "dur": 0.08, "type": "pop" },
+    { "t": 3.2,  "dur": 0.08, "type": "pop" },
+    { "t": 4.5,  "dur": 0.3,  "type": "whoosh",     "from": 500, "to": 3000 },
+    { "t": 4.7,  "dur": 1.5,  "type": "hiss_decay", "gainDb": -22 },
+    { "t": 8.0,  "dur": 0.3,  "type": "whoosh",     "from": 500, "to": 3000 },
+    { "t": 8.2,  "dur": 3.1,  "type": "hiss_shimmer", "gainDb": -26, "modHz": 0.6 },
+    { "t": 11.5, "dur": 0.3,  "type": "whoosh",     "from": 500, "to": 3000 },
+    { "t": 11.7, "dur": 3.1,  "type": "rumble_rise", "cutFrom": 120, "cutTo": 400, "gainDb": -24 },
+    { "t": 15.0, "dur": 1.6,  "type": "riser_noise", "cutFrom": 500, "cutTo": 6000 },
+    { "t": 16.6, "dur": 0.15, "type": "silence_duck" },
+    { "t": 16.75,"dur": 0.3,  "type": "thump_noise" },
+    { "t": 17.1, "dur": 0.4,  "type": "swish" },
+    { "t": 18.5, "dur": 0.05, "type": "tick" }
+  ]
+}

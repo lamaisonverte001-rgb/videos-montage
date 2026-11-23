@@ -1,0 +1,27 @@
+{
+  "name": "maison-verte-videos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Programme Remotion pour le Reel Instagram éducatif La Maison Verte - Script 1 : Nefs l3ter, ri7a khra",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts Script1 out/script1.mp4 --codec=h264 --crf=16 --pixel-format=yuv420p --color-space=bt709 --concurrency=4",
+    "preview": "remotion render src/index.ts Script1 out/preview.mp4 --scale=0.5 --concurrency=4",
+    "cover": "remotion still src/index.ts Script1 out/cover.jpg --frame=558",
+    "audio": "python3 scripts/gen-audio.py",
+    "check-audio": "python3 scripts/check-audio.py",
+    "placeholders": "node scripts/generate-placeholders.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.240",
+    "@remotion/motion-blur": "^4.0.240",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.240"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "jpeg-js": "^0.4.4",
+    "typescript": "^5.7.2"
+  }
+}
